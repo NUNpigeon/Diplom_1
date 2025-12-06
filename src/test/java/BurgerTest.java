@@ -4,13 +4,13 @@ import praktikum.Burger;
 import praktikum.Ingredient;
 import praktikum.IngredientType;
 
+import java.util.Locale;
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-
 public class BurgerTest {
-
 
     @Test
     public void priceCalculationWithMocks() {
@@ -53,10 +53,8 @@ public class BurgerTest {
         burger.addIngredient(i2);
         burger.addIngredient(i3);
 
-        // Переместим слой с ингредиентом: индекс 2 -> 1
         burger.moveIngredient(2, 1);
 
-        // Ожидаемый порядок: i1, i3, i2
         assertSame(i1, burger.ingredients.get(0));
         assertSame(i3, burger.ingredients.get(1));
         assertSame(i2, burger.ingredients.get(2));
@@ -79,7 +77,6 @@ public class BurgerTest {
         burger.addIngredient(i1);
         burger.addIngredient(i2);
 
-        // Удаляем ингредиент по индексу 0
         burger.removeIngredient(0);
 
         assertEquals(1, burger.ingredients.size());
@@ -99,18 +96,25 @@ public class BurgerTest {
         when(i1.getType()).thenReturn(IngredientType.SAUCE);
         when(i1.getName()).thenReturn("mock sauce");
         when(i1.getPrice()).thenReturn(30f);
-
         burger.addIngredient(i1);
 
         String receipt = burger.getReceipt();
 
+
         assertTrue(receipt.startsWith("(==== mock bun ====)"));
+
+
         assertTrue(receipt.contains("= " + IngredientType.SAUCE.toString().toLowerCase() + " mock sauce"));
+
 
         float expectedPrice = 50f * 2f + 30f;
         assertEquals(expectedPrice, burger.getPrice(), 0.001f);
 
-        String expectedPriceLine = String.format("Price: %f", expectedPrice);
-        assertTrue(receipt.contains(expectedPriceLine));
+
+        String expectedPriceLine = String.format(Locale.US, "Price: %.6f", expectedPrice);
+
+
+        assertTrue("Чек должен содержать строку цены: " + expectedPriceLine,
+                receipt.contains(expectedPriceLine));
     }
 }
