@@ -32,11 +32,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Добавляем зависимость на AssertJ для использования soft assertions -->
+
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.24.2</version> <!-- Укажите актуальную версию AssertJ -->
+            <version>3.24.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
