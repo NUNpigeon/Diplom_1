@@ -62,8 +62,8 @@
 
 
 ### Запуск всех тестов
-  ```bash
-    mvn clean test
+```bash
+mvn clean test
     ```
 
 ### Проверка покрытия кода
