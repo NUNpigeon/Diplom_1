@@ -62,13 +62,19 @@
 
 
 ### Запуск всех тестов
- mvn clean test
+  ```bash
+    mvn clean test
+    ```
 
 ### Проверка покрытия кода
+```bash
 mvn jacoco:report
+   ```
 
 ### Запуск с генерацией отчета о покрытии
+```bash
 mvn clean jacoco:prepare-agent test jacoco:report
+   ```
 
 
 
