@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="BurgerTest" time="0.053" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\Наталья\Desktop\Diplom\Diplom_1\target\test-classes;C:\Users\Наталья\Desktop\Diplom\Diplom_1\target\classes;C:\Users\Наталья\.m2\repository\org\mockito\mockito-core\3.12.4\mockito-core-3.12.4.jar;C:\Users\Наталья\.m2\repository\net\bytebuddy\byte-buddy\1.11.13\byte-buddy-1.11.13.jar;C:\Users\Наталья\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.13\byte-buddy-agent-1.11.13.jar;C:\Users\Наталья\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\Наталья\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Наталья\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Наталья\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.27_6\bin"/>
+    <property name="sun.java.command" value="C:\Users\Наталья\AppData\Local\Temp\surefire4376503817622828536\surefirebooter-20251209214232842_3.jar C:\Users\Наталья\AppData\Local\Temp\surefire4376503817622828536 2025-12-09T21-42-32_345-jvmRun1 surefire-20251209214232842_1tmp surefire_0-20251209214232842_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Наталья\Desktop\Diplom\Diplom_1\target\test-classes;C:\Users\Наталья\Desktop\Diplom\Diplom_1\target\classes;C:\Users\Наталья\.m2\repository\org\mockito\mockito-core\3.12.4\mockito-core-3.12.4.jar;C:\Users\Наталья\.m2\repository\net\bytebuddy\byte-buddy\1.11.13\byte-buddy-1.11.13.jar;C:\Users\Наталья\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.13\byte-buddy-agent-1.11.13.jar;C:\Users\Наталья\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\Наталья\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Наталья\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Наталья\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Наталья"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="C:\Program Files\Amazon Corretto\jdk11.0.27_6"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Наталья\Desktop\Diplom\Diplom_1"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Наталья\AppData\Local\Temp\surefire4376503817622828536\surefirebooter-20251209214232842_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.27+6-LTS"/>
+    <property name="user.name" value="Наталья"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="jacoco.destfile" value="C:\Users\Наталья\Desktop\Diplom\Diplom_1\target/coverage-reports/jacoco.exec"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-11.0.27.6.1"/>
+    <property name="localRepository" value="C:\Users\Наталья\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-11/issues/"/>
+    <property name="java.io.tmpdir" value="C:\Users\98AF~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.27"/>
+    <property name="user.dir" value="C:\Users\Наталья\Desktop\Diplom\Diplom_1"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.27_6\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\Наталья\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Наталья\bin;C:\Program Files\Amazon Corretto\jdk11.0.27_6\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;%JAVA HOME%\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\apache-maven-3.9.11-bin\apache-maven-3.9.11\bin;C:\WebDriver\bin\selenium-java-4.35.0;C:\Program Files (x86)\allure-2.35.1\bin;C:\Program Files (x86)\chromedriver-win64;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="11.0.27+6-LTS"/>
+    <property name="java.specification.maintenance.version" value="3"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="moveIngredientShouldMoveThirdToSecondPosition" classname="BurgerTest" time="0.0"/>
+  <testcase name="receiptShouldStartWithBunName" classname="BurgerTest" time="0.0"/>
+  <testcase name="receiptShouldIncludeIngredientInfo" classname="BurgerTest" time="0.025"/>
+  <testcase name="moveIngredientShouldKeepFirstIngredientInPlace" classname="BurgerTest" time="0.002"/>
+  <testcase name="receiptShouldContainFormattedPriceLine" classname="BurgerTest" time="0.009"/>
+  <testcase name="removeIngredientShouldDecreaseSizeByOne" classname="BurgerTest" time="0.002"/>
+  <testcase name="moveIngredientShouldPlaceSecondIngredientAtThirdPosition" classname="BurgerTest" time="0.002"/>
+  <testcase name="priceCalculationWithMocks" classname="BurgerTest" time="0.002"/>
+  <testcase name="receiptPriceShouldMatchCalculatedPrice" classname="BurgerTest" time="0.003"/>
+  <testcase name="removeIngredientShouldRemoveFirstIngredient" classname="BurgerTest" time="0.002"/>
+</testsuite>

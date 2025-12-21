@@ -4,19 +4,17 @@ import org.junit.runners.Parameterized;
 import praktikum.Bun;
 import praktikum.Burger;
 import praktikum.Ingredient;
-import praktikum.IngredientType;
+import org.mockito.Mockito;
+import org.assertj.core.api.Assertions;
 
 
 import java.util.Arrays;
 import java.util.Collection;
 
-
-import static org.junit.Assert.assertEquals;
-
+import static org.mockito.Mockito.when;
 
 @RunWith(Parameterized.class)
 public class BurgerPriceTest {
-
 
     private final Bun bun;
     private final Ingredient[] ingredients;
@@ -29,27 +27,52 @@ public class BurgerPriceTest {
         this.expectedPrice = expectedPrice;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0} {1}, ожидаемая цена: {2}")
     public static Collection<Object[]> data() {
-        Bun cheapBun = new Bun("cheap bun", 100f);
-        Bun expensiveBun = new Bun("expensive bun", 200f);
+        // Моки булочек
+        Bun cheapBun = Mockito.mock(Bun.class);
+        when(cheapBun.getPrice()).thenReturn(100f);
+        when(cheapBun.getName()).thenReturn("cheap bun");
 
-        Ingredient salad = new Ingredient(IngredientType.FILLING, "salad", 30f);
-        Ingredient sauce = new Ingredient(IngredientType.SAUCE, "hot sauce", 50f);
-        Ingredient cheese = new Ingredient(IngredientType.FILLING, "cheese", 80f);
-        Ingredient cutlet = new Ingredient(IngredientType.FILLING, "cutlet", 100f);
+        Bun expensiveBun = Mockito.mock(Bun.class);
+        when(expensiveBun.getPrice()).thenReturn(200f);
+        when(expensiveBun.getName()).thenReturn("expensive bun");
+
+        // Моки ингредиентов
+        Ingredient salad = Mockito.mock(Ingredient.class);
+        when(salad.getPrice()).thenReturn(30f);
+
+        Ingredient sauce = Mockito.mock(Ingredient.class);
+        when(sauce.getPrice()).thenReturn(50f);
+
+        Ingredient cheese = Mockito.mock(Ingredient.class);
+        when(cheese.getPrice()).thenReturn(80f);
+
+        Ingredient cutlet = Mockito.mock(Ingredient.class);
+        when(cutlet.getPrice()).thenReturn(100f);
 
 
-        return Arrays.asList(new Object[][]{{cheapBun, new Ingredient[]{}, 200f}, {cheapBun, new Ingredient[]{sauce}, 250f}, {cheapBun, new Ingredient[]{cutlet, cheese}, 380f}, {expensiveBun, new Ingredient[]{}, 400f}, {cheapBun, new Ingredient[]{sauce, cutlet, cheese, salad}, 460f}, {expensiveBun, new Ingredient[]{cutlet, cheese}, 580f}});
+        return Arrays.asList(new Object[][]{
+                {cheapBun, new Ingredient[]{}, 200f},
+                {cheapBun, new Ingredient[]{sauce}, 250f},
+                {cheapBun, new Ingredient[]{cutlet, cheese}, 380f},
+                {expensiveBun, new Ingredient[]{}, 400f},
+                {cheapBun, new Ingredient[]{sauce, cutlet, cheese, salad}, 460f},
+                {expensiveBun, new Ingredient[]{cutlet, cheese}, 580f}
+        });
     }
 
     @Test
-    public void testGetPriceWithRealObjects() {
+    public void testGetPrice() {
         Burger burger = new Burger();
         burger.setBuns(bun);
-        for (Ingredient ing : ingredients) {
-            burger.addIngredient(ing);
+        for (Ingredient ingredient : ingredients) {
+            burger.addIngredient(ingredient);
         }
-        assertEquals("Цена бургера должна соответствовать ожидаемой", expectedPrice, burger.getPrice(), DELTA);
+        float actualPrice = burger.getPrice();
+        Assertions.assertThat(actualPrice).isCloseTo(expectedPrice, Assertions.offset(DELTA));
     }
+
+
 }
+
